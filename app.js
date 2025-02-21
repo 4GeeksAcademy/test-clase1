@@ -40,20 +40,20 @@ const animateByChart = (ms) => {
         line.split('').forEach((char, charIndex) => {
             setTimeout(() => {
                 process.stdout.write(char);
-                if (charIndex === line.length - 1) { process.stdout.write('\n');
-                 };
+                if (charIndex === line.length - 1) {
+                    process.stdout.write('\n');
+                };
             }, delay);
             delay += ms
-        }, );
+        },);
     });
 };
 const animateByLine = (ms) => {
-    let index = 0
     asciiHeart.forEach((line, index) => {
         setTimeout(() => {
             console.log(line);
         }, ms * index)
     })
 };
-animateByChart(100)
-// animateByLine(500)
+//animateByChart(100)
+animateByLine(500)
